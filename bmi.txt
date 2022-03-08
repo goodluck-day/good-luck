@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        
+    </head>
+    <body>
+        <script>
+            function bmi(){
+            var h= document.getElementById("height").value;
+            var w =document.getElementById("weight").value;
+var bmi=w/(h*h)*10000;
+
+
+//y%4 == 0 && y%100 != 0 || y%400 == 0
+
+
+if(bmi < 18)
+document.getElementById("bmi").innerHTML="Underweight "+ bmi;
+else if(bmi >= 18 && bmi <= 25)
+document.getElementById("bmi").innerHTML="normal "+ bmi;
+else
+document.getElementById("bmi").innerHTML="Obese "+ bmi;
+return false;
+        }
+
+</script>
+<style>
+    .btm{
+        color:blue;
+
+    }
+</style>
+    </body>
+    <body>
+        <form name="fo" id="fo" onsubmit = "return bmi()"  method = "get">
+       <div class="container">
+       <h1>BMI CALCULATOR</h1> 
+       <p>Height(in cm)</p>
+       <input type="text" id="height" name="he">
+       <p>Weight(in kg)</p>
+       
+       <input type="text" id="weight" name="we">
+       <p id="bmi"></p>
+       <input class="btm" type="submit" name="submit" value="calculate" id="btn">
+       </form>
+    </body>
+</html>
